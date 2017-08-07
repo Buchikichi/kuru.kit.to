@@ -1,0 +1,7 @@
+spring:
+  thymeleaf:
+    cache: true
+  http:
+    multipart:
+      maxFileSize: 4MB
+      maxRequestSize: 4MB

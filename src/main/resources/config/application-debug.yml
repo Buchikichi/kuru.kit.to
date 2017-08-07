@@ -1,0 +1,5 @@
+# -Dspring.profiles.active=debug
+spring:
+  thymeleaf:
+    cache: false
+logging.level.org.hibernate.SQL: DEBUG
