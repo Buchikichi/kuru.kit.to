@@ -4,14 +4,15 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 class PlayPage {
 	constructor() {
-		this.canvas = document.querySelector('canvas');
-		this.canvas.width = 512;
-		this.canvas.height = 448;
-		this.gl = this.initWebGL();
-		if (this.gl) {
-console.log(this.gl);
+		this.field = new Field(1024, 768);
+//		this.canvas = document.querySelector('canvas');
+//		this.canvas.width = 512;
+//		this.canvas.height = 448;
+//		this.gl = this.initWebGL();
+//		if (this.gl) {
+//console.log(this.gl);
 			this.start();
-		}
+//		}
 	}
 
 	initWebGL() {
@@ -33,8 +34,8 @@ console.log(this.gl);
 		let activate = ()=> {
 			let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-//			this.field.move();
-//			this.field.draw();
+			this.field.move();
+			this.field.draw();
 			requestAnimationFrame(activate);
 		};
 
